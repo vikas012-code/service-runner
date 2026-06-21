@@ -14,7 +14,7 @@ const job = cron.schedule("* 10 * * * *",async function() {
     try {
         const res1 = await fetch("https://supamart-v-backend.onrender.com/")
         const res2 = await fetch("https://r-r-ornaments-backend.onrender.com")
-        const res3 = await fetch("https://ai-project-backend-1vla.onrender.com")
+        const res3 = await fetch("https://ai-project-backend-1vla.onrender.com/wake")
         const data1 = await res1.json()
         const data2 = await res2.json()
         const data3 = await res3.json()
