@@ -8,8 +8,8 @@ app.get("/", (req,res)=>{
 })
 
 
-const job = cron.schedule("* 10 * * * *",async function() {
-    console.log("running a task every 10 minute");
+const job = cron.schedule("* 5 * * * *",async function() {
+    console.log("running a task every 5 minute");
 
     try {
         const res1 = await fetch("https://supamart-v-backend.onrender.com/")
