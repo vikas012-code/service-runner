@@ -8,6 +8,7 @@ app.get("/", (req,res)=>{
 })
 
 app.get("/wake", (req,res)=>{
+    console.log("wake...");
     res.send("wake...!");
 })
 
