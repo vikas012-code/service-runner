@@ -3,12 +3,31 @@ const cron = require("node-cron");
 
 const app = express();
 
+async function fun () {
+    console.log("running a task every 1 minute");
+
+    try {
+        const res1 = await fetch("https://supamart-v-backend.onrender.com/")
+        const res2 = await fetch("https://r-r-ornaments-backend.onrender.com")
+        const res3 = await fetch("https://ai-project-backend-1vla.onrender.com/wake")
+        console.log("All APIs are running successfully");
+    } catch (error) {
+        console.log("error ",{error});
+    }
+    
+}
+
 app.get("/", (req,res)=>{
     res.send("Hello World!");
 })
 
 app.get("/wake", (req,res)=>{
     console.log("wake...");
+    
+    setTimeout(() => {
+        fun();
+    }, 60000);
+    
     res.send("wake...!");
 })
 
