@@ -7,6 +7,10 @@ app.get("/", (req,res)=>{
     res.send("Hello World!");
 })
 
+app.get("/wake", (req,res)=>{
+    res.send("wake...!");
+})
+
 
 const job = cron.schedule("* 1 * * * *",async function() {
     console.log("running a task every 1 minute");
